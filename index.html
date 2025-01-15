@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link rel="canonical" href="https://pagana-pasteleria.pages.dev/">
+  
+  <!-- Site Metas -->
+  <meta name="keywords" content="Pagana Pastelería, pastelería sin gluten, pastelería vegana, pastelería keto, postres sin azúcar, repostería saludable, trufas sin gluten, pasteles veganos, opciones keto, colecciones de postres, dulces saludables" />
+  <meta name="description" content="Pagana Pastelería ofrece una variedad exclusiva de postres sin gluten, opciones veganas sin azúcar y deliciosas alternativas keto. ¡Disfruta del placer de un dulce saludable!" />
+  <meta name="author" content="Pagana Pastelería" />
+  <link rel="shortcut icon" href="images/favicon-16x16.png" type="image/png">
+
+  <title>Pagana Pastelería - Postres Sin Gluten, Veganos, Sin Azúcar y Keto</title>
+
+   <!-- Fonts Style -->
+   <!-- Enlace para cargar Kanit, Nanum Gothic y Righteous -->
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Nanum+Gothic&family=Righteous:wght@400&display=swap" rel="stylesheet">
+
+  
+   <!-- Owl Carousel Stylesheet -->
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+   
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+   <!-- Font Awesome -->
+   <link href="css/font-awesome.min.css" rel="stylesheet" />
+   
+   <!-- Custom Styles -->
+   <link href="css/style.css" rel="stylesheet" /> 
+   <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="header_bottom">
+    <div class="container-fluid text-center">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <!-- Contenedor para logo y texto -->
+        
+        <div class="logo-container">
+          <img src="images/cup.png" alt="Logo" class="logo-cup">
+          <h1 class="logcom">PAGANA PASTELERÍA</h1>
+        </div>
+      
+      
+        <hr>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#location">Visítanos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="prodnav">Productos</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="productos.html">Tienda</a>
+                <a class="dropdown-item" href="como-comprar.html">Cómo Comprar</a>
+              </div>
+              
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+<br>
+    
+    <!-- end header section -->
+
+    <div class="slider">
+      <img id="img-1" src="images/pedido especiales.jpg" alt="Image 1" />
+      <img id="img-2" src="images/alfajor nuez.jpg" alt="Image 2" />
+      <img id="img-3" src="images/pansingluten.jpg" alt="Image 3" />
+    </div>
+    <div class="navigation-button">
+      <span class="dot active" onclick="changeSlide(0)"></span>
+      <span class="dot" onclick="changeSlide(1)"></span>
+      <span class="dot" onclick="changeSlide(2)"></span>
+    </div>
+   
+  
+  <style>
+    /* Reset and base styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+    --primary-color: #facaca;  /* Rosa claro */
+    --secondary-color: #ffffff; /* Blanco */
+    --accent-color: #ffcd9e;    /* Dorado */
+    --text-color: #2C1810;      /* Texto oscuro (puedes ajustarlo) */
+    --background-light: #FFF9F5; /* Fondo suave */
+    --rose-color: #f59eae;      /* Un tono de rosa más profundo */
+    }
+
+  /* Estilo para usar Kanit */
+
+/* Contenedor del logo */
+
+/* Contenedor del logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 767px) {
+    .logo-container {
+      display: block; /* Deja que se muestre en bloque en móviles */
+      text-align: center; /* Asegura que el texto esté centrado en móviles */
+    }
+    
+    .logo-container img {
+      max-width: 80px; /* Puedes ajustar el tamaño del logo en móviles si lo necesitas */
+      margin-right: 0; /* Elimina el margen derecho */
+    }
+  }
+
+/* Estilo del logo */
+.logo-cup {
+  width: 60px;
+  height: auto;
+  
+}
+
+/* Estilo del texto   pagana home texto */
+.logcom {
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.5rem;
+  color: #f39292; /* Color oscuro para texto */
+  margin: 10px;
+}
+.pagp {
+  margin-bottom: 6px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column; /* Alineación vertical en dispositivos pequeños */
+  }
+  .logo-cup {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* Ajustes al logo */
+.navbar-brand {
+  width: 100%; /* Centra todo el contenido dentro del nav */
+  text-align: center;
+}
+
+
+/* Navigation styles */
+.navbar {
+  padding: 0;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 0 15px;
+}
+
+.header_bottom {
+  padding: 10px 0;
+  background-color: #ffffff;
+}
+
+.nav-link {
+  position: relative; /* Necesario para crear una pseudo-línea debajo del texto */
+  transition: color 0.3s ease; /* Transición suave para el color del texto */
+}
+
+.nav-link:hover {
+  color: #f85454; /* Cambia el color del texto al pasar el mouse */
+}
+
+.nav-link::after {
+  content: ''; /* Crea una línea debajo del texto */
+  position: absolute;
+  bottom: 0; /* Coloca la línea justo abajo del texto */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Altura de la línea */
+  background-color: #ebb9b0; /* Color de la línea */
+  opacity: 0; /* Línea invisible inicialmente */
+  transition: opacity 0.3s ease; /* Transición suave para la línea */
+}
+
+.nav-link:hover::after {
+  opacity: 1; /* Muestra la línea cuando se pasa el mouse */
+}
+
+
+/* Estilo para los enlaces dentro del menú desplegable */
+.dropdown-item {
+  position: relative; /* Necesario para crear la pseudo-línea debajo del texto */
+  transition: color 0.3s ease; /* Transición suave para el color del texto */
+}
+
+/* Efecto al pasar el mouse */
+.dropdown-item:hover {
+  color: #da3d21; /* Cambia el color del texto */
+}
+
+/* Línea debajo de los enlaces */
+.dropdown-item::after {
+  content: ''; /* Crea una línea debajo del texto */
+  position: absolute;
+  bottom: 0; /* Coloca la línea justo debajo del texto */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Altura de la línea */
+  background: linear-gradient(45deg, #ffa7a4, #ffc3a0, #bb0f0f);
+  opacity: 0; /* Línea invisible inicialmente */
+  transition: opacity 0.3s ease; /* Transición suave para la línea */
+}
+
+/* Cuando se pasa el mouse, muestra la línea */
+.dropdown-item:hover::after {
+  opacity: 1; /* Muestra la línea al pasar el mouse */
+}
+
+
+
+@media (max-width: 768px) {
+  .header_bottom {
+    padding-top: 15px;
+  }
+  
+  .logo-container {
+    padding: 0;
+  }
+  
+  .logo-cup {
+    width: 50px;
+    margin: 0;
+  }
+  
+  .logcom {
+    font-size: 1.3rem;
+    margin: 5px 0 10px 0;
+  }
+  
+  .navbar-nav {
+    margin: 10px 0;
+  }
+}
+
+.banalf {
+    background-image: url('images/alfacool.jpg'); /* Imagen de fondo */
+    background-size: center;
+    background-position: center;
+    border-radius: 16px; 
+    height: 240px; /* Altura del banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prodnav {
+  font-weight: 600;
+  color: #f39292;
+  font-size: 16px;
+}
+
+
+
+.banner-text {
+    background-color: rgba(55, 77, 30, 0.568); 
+    color: rgba(245, 245, 221, 0.884);
+    padding: 20px;
+    text-align: center;
+    border-radius: 165px 26px 18px 26px;
+    max-width: 600px; 
+    width: 100%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.603); 
+}
+
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 5vh 1fr 5vh;
+  grid-template-columns: auto minmax(450px, 550px) auto;
+}
+
+.main > img {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.fore {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f8d079, #f89898, #d6dbc8);
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 0% 0%);
+}
+
+.content {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.6em;
+}
+
+.title h1 {
+  position: relative;
+  align-self: center;
+  margin-top: 0.4em;
+  color: #d2f483;
+  text-transform: uppercase;
+  font-size: 4vw; /* Escala dinámica */
+  line-height: 0.8em;
+}
+
+.title h1::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0.1em;
+  background-color: #f4b183;
+  right: -0.35em;
+  transform: rotate(-35deg);
+}
+
+.title p:first-of-type {
+  align-self: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.24em;
+  margin-left: 3.5em;
+  color: #f4b183;
+  opacity: 0.7;
+}
+
+.title p:last-of-type {
+  margin-top: -1em;
+  color: white;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.title p:last-child > span {
+  font-size: 1.7em;
+}
+
+.foot {
+  margin: 0.8em;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: -0.1em;
+  font-size: 2vw; /* Escala dinámica */
+  line-height: 1.6em;
+  color: #292929;
+}
+
+.foot h1 {
+  font-weight: 900;
+}
+
+.foot h1 > span {
+  font-weight: 100;
+}
+
+/* Consultas de medios */
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .main > img {
+    height: 50vh; /* Ajuste de altura para pantallas medianas */
+  }
+
+  .title h1 {
+    font-size: 6vw; /* Texto más grande en tablets */
+  }
+
+  .title p:first-of-type {
+    font-size: 1em;
+    margin-left: 0;
+  }
+
+  .foot {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 8vw; /* Texto más grande en móviles */
+  }
+
+  .title p:first-of-type {
+    font-size: 1.2em;
+    margin-left: 0;
+  }
+
+  .foot {
+    font-size: 3vw;
+  }
+}
+
+
+
+.me {
+    color: #ffd7db; 
+    font-weight: 700;
+
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.banner p {
+    font-size: 18px;
+    color: #2C1810;
+}
+
+
+
+/* Estilo para usar Nanum Gothic */
+p {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* Estilo para usar Righteous */
+.title {
+    font-family: 'Righteous', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+ 
+.logcom {
+
+font-family: "Righteous", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+}
+
+.pagana {
+
+  font-family: "Righteous", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+}
+
+.personalized-products {
+        background-image: url('images/cekebracion.jpg'); 
+        background-size: cover; 
+        background-position: center; 
+        color: white; 
+        padding: 50px 0; 
+    }
+
+    .personalized-products .container {
+        background-color: rgba(0, 0, 0, 0.5); 
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .personalized-products .section-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+.section-title {
+  font-size: 28px; 
+  margin-bottom: 20px;
+  color: #ec8a8a; 
+}
+
+@media (max-width: 768px) {
+    .personalized-products p {
+        color: white; 
+    }
+}
+
+
+.section-description,
+.section-details {
+  font-size: 18px; 
+  color: #fcd8d8;
+  margin-bottom: 20px; 
+}
+
+
+.slider-horizontal {
+    max-width: 100%; 
+    max-height: auto; 
+    overflow: hidden; 
+    margin: 0 auto; 
+}
+
+
+/* Tarjeta de producto */
+/* Contenedor principal de productos */
+.products-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+}
+
+/* Contenedor de tarjetas */
+.products-container {
+    width: 100%;
+    max-width: 1200px; 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+/* Tarjeta de producto */
+.product-card {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f8a1a1bd;
+    border-radius: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0; 
+}
+
+/* Imagen dentro de la tarjeta */
+.product-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .product-card {
+        max-width: calc(100% - 1rem); 
+        margin: 0 auto;
+    }
+    
+    .products-container {
+        padding: 0 0.5rem;
+    }
+}
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    .product-image {
+        width: 80%; /* Reduce el tamaño de la imagen al 80% en dispositivos móviles */
+    }
+}
+
+.row {
+    margin: 0 -15px;
+}
+
+.carousel-item {
+    padding: 1rem 0;
+}
+
+/* como llegar */
+ 
+  details summary {
+        font-weight: bold;
+        color: #db9b9b; 
+        cursor: pointer;
+    }
+
+   
+    details[open] summary {
+        color: #ec9494; 
+    }
+
+   
+    details summary:hover {
+        color: #fd5050f1; 
+    }
+
+@media (max-width: 768px) {
+    .product-card {
+        margin: 0.5rem 0;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+}
+
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(248, 248, 248, 0.767); 
+    border-radius: 50%; 
+}
+.wavy-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh;
+      background: transparent;
+      margin: 50px 0;
+    }
+
+    .wavy-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #FFE4E4;
+      z-index: -1;
+    }
+
+    .wavy-container::before,
+    .wavy-container::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background-repeat: repeat-x;
+      z-index: -1;
+    }
+
+    .wavy-container::before {
+      top: -29px;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' fill='%23FFE4E4'/%3E%3C/svg%3E");
+    }
+
+    .wavy-container::after {
+      bottom: -29px;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' fill='%23FFE4E4' transform='rotate(180)'/%3E%3C/svg%3E");
+    }
+
+    .add-button {
+      padding: 15px 30px;
+      background-color: #ff6b6b;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .add-button:hover {
+      transform: scale(1.05);
+    }
+
+    .add-button:hover {
+  background-color: #ff9393; /* Mantén el fondo oscuro al hacer hover */
+  color: transparent; /* Hace que el color del texto sea invisible */
+  background-image: linear-gradient(to right, #fa6767, #7cff7c); /* Degradado blanco a verde */
+  -webkit-background-clip: text; /* Asegura que el degradado se aplique solo al texto */
+  background-clip: text;
+}
+
+    /* Hero Section */
+    .hero {
+        background-color: var(--background-light);
+        padding: 2rem 1rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .hero-content {
+        padding: 2rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        color: var(--accent-color);
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+    }
+
+    .hero-description {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        position: relative;
+        height: 80%;
+        min-height: 250px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(139, 94, 60, 0.1);
+    }
+
+
+    .hero-description {
+        color: #aa3f3f; 
+        font-size: 1.1rem; 
+    }
+
+    /* Ajustar también el color de los encabezados, si es necesario */
+    .hero h1, .hero h2, .hero h3 {
+        color: #f38181ee;
+    }
+
+   
+    .hero-image {
+  position: relative; /* Posicionamiento relativo para el texto */
+  width: 100%;
+  height: auto; /* Ajuste dinámico de altura */
+  margin-top: 15px;
+  margin: auto;
+  background-image: url('images/tienda.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Evita que el contenido salga de los bordes */
+}
+
+.hero-image .text {
+  position: absolute;
+  top: 50%; /* Centrado vertical */
+  left: 50%; /* Centrado horizontal */
+  transform: translate(-50%, -50%); /* Ajusta el centrado */
+  color: rgb(250, 163, 163);
+  font-size: 16px; /* Tamaño de texto más pequeño para móviles */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  max-width: 90%; /* Asegura que el texto no sobresalga del contenedor */
+  text-align: center; /* Alinea el texto al centro */
+  padding: 10px;
+  background: rgba(255, 153, 153, 0.7); /* Fondo semitransparente */
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.text h2 {
+  font-size: 18px; /* Ajusta el tamaño del encabezado */
+  color: #ffe9e9;
+  font-weight: 600;
+}
+
+.text p {
+  font-size: 14px; /* Tamaño del párrafo ajustado */
+  color: #ffffff;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .hero-image {
+    height: 200px; /* Ajusta la altura para pantallas pequeñas */
+  }
+
+  .hero-image .text {
+    font-size: 14px; /* Reduce el tamaño del texto */
+    max-width: 85%; /* Limita el ancho del texto */
+  }
+
+  .text h2 {
+    font-size: 16px;
+  }
+
+  .text p {
+    font-size: 12px;
+  }
+}
+
+
+
+    .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-2px);
+    }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de Giro */
+@keyframes rotate {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+/* Estilo para las características */
+
+.carousel-inner {
+  border-radius: 14px; /* bordes tarjeta rosa postres*/
+}
+
+.feature:hover {
+    animation: rotate 2s forwards; /* Gira al pasar el mouse */
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 600px) {
+    .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+        gap: 1rem; /* Espacio entre los elementos */
+    }
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  background: linear-gradient(120deg, #f4dbf7, #ffbbb8f6);
+  border-radius: 12px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Asegura que el texto esté debajo */
+/* Ajusta la imagen al contenedor */
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 15px;
+  width: 120px;
+  height: 150px; /* Incrementa la altura para que haya espacio para texto */
+  color: #ffffff; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-text {
+  margin-top: auto; /* Empuja el texto hacia la parte inferior del contenedor */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+#myBtn {
+  position: fixed;
+  bottom: 15px; 
+  right: 25px; 
+  background-color: rgba(250, 180, 180, 0.753); 
+  color: rgba(247, 100, 100, 0.815); 
+  border: none;
+  outline: none;  /* Añade esta línea */
+  border-radius: 20px; 
+  padding: 10px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  display: none; 
+  z-index: 1000;
+}
+
+/* También puedes añadir esto para asegurarte que no aparezca al hacer focus */
+#myBtn:focus {
+  outline: none;
+  border: none;
+}
+
+#myBtn:hover {
+  background-color: rgba(253, 167, 167, 0.884); 
+  transform: scale(1.1); 
+}
+
+/* Icono */
+#myBtn i {
+  font-size: 20px;
+}
+
+
+@media (max-width: 768px) {
+  #myBtn {
+    bottom: 10px; 
+    right: 10px; 
+    padding: 12px; 
+    font-size: 20px;
+  }
+}
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(209, 105, 105, 0.2);
+}
+
+/* Backgrounds for each feature */
+.gluten {
+  background-image: url('images/nogluten.PNG');
+}
+
+.vegan {
+  background-image: url('images/vegan.png');
+}
+
+.keto {
+  background-image: url('images/keto.jpg');
+}
+
+.sugar-free {
+  background-image: url('images/nosufar.PNG');
+}
+
+.lactose-free {
+  background-image: url('images/nolactose.jpeg');
+}
+
+.low-calories {
+  background-image: url('images/lowcarb.jpg');
+}
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.feature-text {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+</style>
+<hr>
+
+<a href="/productos.html#alfacool" class="banalf-link">
+  <div class="banalf">
+    <div class="banner-text">
+      <h1>Alfacool</h1>
+      <p class="me">
+        <strong>Mejor Alfajor Exótico 2024</strong><br>
+        Ganador del Mundial del Alfajor 2024.  
+        Deléitate con nuestro alfajor de manteca de maní,  
+        relleno con garrapiñadas de almendras y pistachos.  
+        ¡Sin azúcar y sin gluten, para un sabor único y saludable!
+      </p>
+    </div>
+  </div>
+</a>
+
+  <!-- service section -->
+<section class="hero">
+    
+  <div class="hero-content" style="text-align: center; margin-top: -2.1rem;">
+      <h1 class="hero-title">Dulzura natural para un mundo más sano</h1>
+      <h2 class="logcom"style="margin-top: -0.5rem;">PAGANA PASTELERÍA</h2><br><br><br>
+      <a href="productos.html" class="add-button">Explorar Productos</a>
+      <br>  <br>  
+      <p class="hero-description">
+      
+          En Pagana, nos dedicamos a crear postres y comidas saludables sin gluten, 
+          veganas y keto. Cada bocado está hecho con ingredientes frescos y naturales.
+      </p>
+    
+      <section class="features">
+        <div class="feature-item gluten">
+          <div class="feature-icon"></div>
+          <div class="feature-text">Sin Gluten</div>
+        </div>
+        <div class="feature-item vegan">
+          <div class="feature-icon"></div>
+          <div class="feature-text">Vegano</div>
+        </div>
+        <div class="feature-item keto">
+          <div class="feature-icon"></div>
+          <div class="feature-text">Keto</div>
+        </div>
+        <div class="feature-item sugar-free">
+          <div class="feature-icon"></div>
+          <div class="feature-text">Sin Azúcar</div>
+        </div>
+        <div class="feature-item lactose-free">
+          <div class="feature-icon"></div>
+          <div class="feature-text">Sin Lactosa</div>
+        </div>
+        <div class="feature-item low-calories">
+          <div class="feature-icon"></div>
+          <div class="feature-text">Bajo en Calorías</div>
+        </div>
+      </section>
+
+  <br>
+  <div class="hero-image">
+    <div class="text">
+      <h2>¡Dulzura y Salud en Cada Bocado!</h2>
+      <p>Disfruta de pasteleria y demás, sin azúcar, keto, veganos y sin gluten, ideales para tu bienestar, necesidades especiales o simplemente para disfrutar.</p>
+    </div>
+
+</section>
+<button onclick="scrollToTop()" id="myBtn" title="Go to top">
+  <i class="fa fa-arrow-up"></i> 
+</button>
+             
+              <section class="products-section">
+                <!-- Primer Slider -->
+                <h2 class="deli-title">Descubre Nuestros Postres</h2>
+                <div id="productSlider1" class="carousel slide mt-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="product-card">
+                                            <img src="images/alfajor chocolate.jpg" alt="Alfajor de Chocolate Negro" class="product-image">
+                                            <h3>Alfajor Bon o Bon de Chocolate Negro</h3>
+                                            <p>Alfajor de chocolate negro sin azúcar, relleno de una cremosa mezcla de mantequilla de maní y chocolate negro, coronado con delicados trocitos de maní tostado.</p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-card">
+                                            <img src="images/alfajor blanco.jpg" alt="Alfajor de Chocolate Blanco" class="product-image">
+                                            <h3>Alfajor de Chocolate Blanco & Frambuesa</h3>
+                                            <p>Tapa sabor vainilla relleno de frambuesa, cubiertas con chocolate blanco.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-card">
+                                            <img src="images/paganitos.jpg" alt="Paganitos" class="product-image">
+                                            <h3>Paganitos</h3>
+                                            <p>Merengue con cobertura de chocolate.
+                                            Clásico individual, ideal para disfrutar en cualquier momento.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <br>
+        <br>
+          <!-- Images slider -->
+       
+          <div class="logos__marquee">
+            <div class="marquee__logos">
+              <img src="images/alfa.PNG" alt="Pastelería sin azúcar" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+              <img src="images/biz.jpeg" alt="Pastelería con azúcar" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+              <img src="images/pan avena.jpeg" alt="Pastelería sin gluten" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+              <img src="images/merienda sin gluten.PNG" alt="Pastelería para diabéticos" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+              <img src="images/tarta jamon y queso.png" alt="Ingredientes para pastelería saludable" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+              <img src="images/sand pan blanco.PNG" alt="Pastelería artesanal" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+            </div>
+            <div class="marquee__logos">
+              <img src="images/alfa medio.jpg" alt="Pastelería sin azúcar" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+              <img src="images/biz.jpeg" alt="Pastelería con azúcar" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+              <img src="images/donas choco.jpg" alt="Pastelería sin gluten" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+              <img src="images/merienda sin gluten.PNG" alt="Pastelería para diabéticos" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+              <img src="images/alfa  dulce de leche y chocolatoso, este alfajor es Gluten Free & SUGA.jpg" alt="Ingredientes para pastelería saludable" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+              <img src="images/pan keto.jpeg" alt="Pastelería artesanal" style="border-radius: 15px; object-fit: cover; overflow: hidden;">
+            </div>
+          </div>
+          
+                <!-- Segundo Slider -->
+                <div id="productSlider2" class="carousel slide mt-5" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="product-card">
+                                            <img src="images/massini.jpg" alt="Massini" class="product-image">
+                                            <h3>Massini</h3>
+                                            <p>Delicioso postre de capas de bizcochuelo esponjoso, relleno de crema chantilly y cubierto con una crujiente capa de azúcar caramelizada, creando un contraste perfecto de texturas y sabores.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-card">
+                                            <img src="images/alfajor duo chocolate.jpg" alt="Alfajor Duo de Chocolate" class="product-image">
+                                            <h3>Alfajor Duo de Chocolate Moras & Limon </h3>
+                                            <p>Alfajor  Sin azúcar, Tapas de Génoise sabor Limon, relleno de ganache de Moras, con chocolate semiamargo y blanco. Petalos de rosa</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-card">
+                                            <img src="images/rogelpagano.png" alt="Rogel" class="product-image">
+                                            <h3>Rogel</h3>
+                                            <p>Delicioso postre tradicional compuesto por varias capas de masa crujiente, intercaladas con un suave y dulce dulce de leche. Todo ello cubierto con un delicado merengue dorado, que aporta un toque esponjoso y ligeramente crujiente.<br>
+                                            Hace cualquier ocasión especial.</p>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      
+              </section>
+
+
+              <div class="main">
+  <img src="images/alfacool.jpg" alt="Pagana Pastelería">
+  <div class="fore"></div>
+  <div class="content">
+    <div class="title">
+      <h1>Pagana</h1>
+      <p style="color: #ffffff;"><strong>pastelería saludable sin gluten</strong></p>
+      <p>Ganador del<br>Mundial<br>del Alfajor<br>2024<br><br><span>¡Único!</span></p>
+    </div>
+    <div class="foot">
+      <h1><span>100%</span><br> sabor<br> y<br> salud</h1>
+    </div>
+  </div>
+</div>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="45%">
+  <defs>
+      <style>
+          .pastel-1 { fill: #FFB3BA; }
+          .pastel-2 { fill: #FFDFBA; }
+          .pastel-3 { fill: #fa9393; }
+          .pastel-4 { fill: #f89e8e; }
+          .pastel-5 { fill: #abf8b1; }
+      </style>
+  </defs>
+  <g opacity="0.5">
+      <circle class="pastel-1" cx="50" cy="50" r="40" />
+      <circle class="pastel-2" cx="150" cy="80" r="50" />
+      <circle class="pastel-3" cx="200" cy="150" r="60" />
+      <circle class="pastel-4" cx="300" cy="100" r="45" />
+      <circle class="pastel-5" cx="400" cy="200" r="55" />
+      <circle class="pastel-1" cx="500" cy="50" r="35" />
+      <circle class="pastel-2" cx="450" cy="120" r="30" />
+  </g>
+</svg>
+
+<div class="wavy-container ">
+  <div class="wavy-background"></div>
+  <a href="productos.html" class="add-button">Explorar Productos <br></a>
+  <br>
+</div>
+
+<section class="personalized-products">
+  <div class="container text-center">
+    <h2 class="pagana">Productos Personalizados</h2>
+    <p class="section-description">
+      En Pagana Pastelería, ofrecemos productos personalizados para satisfacer tus gustos y preferencias. 
+      Desde tortas temáticas hasta postres a medida, estamos aquí para hacer realidad tus deseos.
+    </p>
+    <br>
+    <p>
+      ¡Realiza tu reserva previa y disfruta de una experiencia única!
+    </p>
+    <br>
+    <p>
+      Contáctanos para discutir tus ideas y crear la torta perfecta para cualquier ocasión.
+    </p>
+  
+    <!-- Botón de reservar perosalizados por WhatsApp -->
+    <a href="https://wa.me/59899155445?text=¡Hola!%20Estoy%20interesado/a%20en%20hacer%20una%20reserva%20de%20productos%20personalizados%20desde%20la%20página%20web." 
+   class="add-button" target="_blank">Reservar</a>
+
+  </div>
+</section>
+
+        <!-- Sección de Ubicación -->
+<!-- Sección de Ubicación -->
+<section class="location-section" id="location">
+  <div class="location-container">
+      <h2 class="location-title">Encuéntranos Fácilmente</h2>
+      <div class="map-wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13100.235343214916!2d-55.9713365!3d-34.8296132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89abcf0234a9%3A0x974b188d0fae4ef!2spagana%20pasteleria!5e0!3m2!1ses!2suy!4v1730079077937!5m2!1ses!2suy" 
+                  width="100%" 
+                  height="450" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+      </div>
+      <div class="location-info">
+        <h3>Cómo Llegar</h3>
+        
+        <details>
+            <summary><strong>Estamos ubicados a metros de la Avenida Uruguay y Giannatassio.</strong></summary>
+            <ul>
+                <li>Puedes tomar los buses 222, 221, C4, 710 Giannatassio, 214, y más que te dejarán muy cerca de nuestro local.</li>
+                <li>Contamos con estacionamiento en la puerta de nuestro local.</li>
+            </ul>
+        </details>
+        
+        <details>
+            <summary><strong>Nuestro local de Atlántida se encuentra en Epico Mercado Gastronómico y Centro Comercial</strong></summary>
+            <ul>
+                <li>Cdad. de Montevideo entre 11 y 1, 16000 Atlántida, Departamento de Canelones.</li>
+                <li>Puedes tomar los buses que te dejen en el centro de Atlántida.</li>
+            </ul>
+        </details>
+        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Pagana+Pasteleria" class="direction-link" target="_blank">
+            Ver Indicaciones Local Solymar
+        </a>
+    </div>
+     
+</section>
+  <br>
+
+<hr>
+
+ <!-- info section / footer -->
+<section class="info_section layout_padding2">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 col-lg-3 info_col">
+              <div class="info_contact">
+                  <h4>Ubicación y Contacto</h4>
+                  <div class="contact_link_box">
+                      <a href="#">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          <span>Envíos a domicilio</span>
+                      </a>
+                      <a href="tel:+59897524589">
+                          <i class="fa fa-phone" aria-hidden="true"></i>
+                          <span>Teléfono: +598 99 155 445</span>
+                      </a>
+                      <a href="mailto:paganapasteles@gmail.com">
+                          <i class="fa fa-envelope" aria-hidden="true"></i>
+                          <span>Email: paganapasteles@gmail.com</span>
+                      </a>
+                  </div>
+              </div>
+              <div class="info_social">
+                  <h4>Síguenos en Redes Sociales</h4>
+                  <a href="https://www.facebook.com/Pagana-Pasteler%C3%ADa-100063441831086/" aria-label="Facebook Pagana Pastelería">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://twitter.com/paganapasteleria" aria-label="Twitter Pagana Pastelería">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.instagram.com/paganapasteleria/" aria-label="Instagram Pagana Pastelería">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3 info_col">
+              <div class="info_detail">
+                  <h4>Acerca de Pagana Pastelería</h4>
+                  <p>
+                      Pagana Pastelería es tu destino para disfrutar de deliciosos productos 100% libres de gluten, con opciones veganas y sin azúcar. 
+                      ¡Ven y descubre nuestros sabores únicos!
+                  </p>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-2 mx-auto info_col">
+              <div class="info_link_box">
+                  <h4>Enlaces Rápidos</h4>
+                  <div class="info_links">
+                      <a class="acti" href="index.html">
+                          <i class="fa fa-home" aria-hidden="true"></i>
+                          Inicio
+                      </a>
+                      <a href="nosotros.html">
+                          <i class="fa fa-info-circle" aria-hidden="true"></i>
+                          Sobre Nosotros
+                      </a>
+                      <a href="productos.html">
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          Comprar Productos
+                      </a>
+                      <a href="contacto.html">
+                          <i class="fa fa-envelope" aria-hidden="true"></i>
+                          Contáctanos
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3 info_col">
+            <div class="info_hours">
+                <h4>Horarios</h4>
+                <ul class="horarios">
+                    <ul>Local Solymar</ul>
+                    <li>Lunes a sábado: 8:00  ☼ – 21:00 ☽ </li>
+                    <li>Domingo: 09:00  ☼ – 21:00  ☽ </li>
+                </ul>
+                <ul class="horarios">
+                  <ul>Local Atlantida</ul>
+                  <li>Martes a Domingo:<br> 10:00  ☼ – 23:00   ☽ </li>
+              </ul>
+            </div>
+        </div>     
+        
+      <br>
+  </div>
+</section>
+
+<!-- end info section -->
+
+<!-- footer section -->
+<section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> Todos los Derechos Reservados por
+        <a href="#">Pagana Pastelería</a>
+      </p>
+    </div>
+</section>
+
+  <!-- footer section -->
+
+ <!-- Bootstrap & jQuery Scripts -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="js/btn.js"></script>
+ <script type="text/javascript" src="js/homelsider.js"></script>
+
+<script>
+
+// Obtener el botón
+let mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 895 || document.documentElement.scrollTop > 895) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// Función corregida para ir al inicio de la página
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+  let currentIndex = 0;
+  const slides = document.querySelector('.slides');
+  const indicators = document.querySelectorAll('.indicator');
+
+  function changeSlide(n) {
+    currentIndex = (currentIndex + n + 3) % 3;
+    updateSlide();
+  }
+
+  function currentSlide(n) {
+    currentIndex = n;
+    updateSlide();
+  }
+
+  function updateSlide() {
+    slides.style.transform = 'translateX(' + (-100 * currentIndex) + '%)';
+    indicators.forEach((indicator, idx) => {
+      indicator.classList.toggle('active', idx === currentIndex);
+    });
+  }
+
+  // Auto-play
+  setInterval(() => {
+    changeSlide(1);
+  }, 5000);
+</script>
+  
+  <script>
+    $(document).ready(function(){
+      $('#customCarousel1').carousel();
+    });
+  </script>
+
+<!-- Owl Carousel initialization -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 3100,
+      nav: true,
+    });
+  });
+</script>
+
+</body>
+</html>
+
+

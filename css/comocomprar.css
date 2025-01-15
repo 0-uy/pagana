@@ -1,0 +1,164 @@
+/* Hero Banner Styles  comocomprar.html */
+.how-to-order {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.order-content {
+    max-height: auto; /* Ajusta esta altura según lo necesario */
+    overflow-y: auto; /* Solo mostrará el scroll si el contenido excede la altura */
+}
+
+.order-image-wrapper {
+    position: relative;
+    padding: 20px;
+}
+
+.floating-image {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(223, 145, 145, 0.568);
+    transition: transform 0.3s ease;
+}
+
+.floating-image:hover {
+    transform: translateY(-10px);
+}
+
+.section-title2 {
+    color: #f7a7b3e3; 
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+.floating-image {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(223, 145, 145, 0.568);
+    transition: transform 0.3s ease;
+}
+
+.floating-image:hover {
+    transform: translateY(-10px);
+}
+
+.section-title2 {
+    color: #f7a7b3e3; 
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+.steps-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateX(10px);
+}
+
+.step-icon {
+    background: #ff6b6b;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.step-item p {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .how-to-order {
+        padding: 60px 0;
+    }
+
+    .order-image-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-to-order {
+        padding: 40px 0;
+    }
+
+    .step-item {
+        padding: 12px;
+    }
+
+    .step-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .step-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
