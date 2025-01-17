@@ -125,15 +125,16 @@
 
 </div>
 
-<div class="carrito-dropdown" id="carritoDropdown">
-  <div class="ticket-header">
+<div class="carrito-dropdown" id="carritoDropdown" style="display: none;">
+    <span class="close" onclick="cerrarCarrito()">&times;</span>
+    <div class="ticket-header">
     <h6>
       <img src="images/cup.png" alt="Logo" style="width: 30px; height: auto; margin-right: 10px;">
       Tus Productos
     </h6>
-    <p style="color: rgb(158, 57, 57); font-size: 12px; white-space: nowrap;">
+    <p>
       Pagana Pastelería,<br>
-       productos frescos y libres de gluten
+      productos frescos y libres de gluten
     </p>
   </div>
   <div id="carrito"></div>
@@ -162,6 +163,19 @@
 
 }
 
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #e74c3c;
+}
 .logcom {
   font-family: 'Righteous', sans-serif;
   font-size: 1.5rem;
@@ -180,6 +194,81 @@
 .btn-vaciar:hover {
   background-color: rgb(252, 169, 148);
 }
+
+
+.carrito-dropdown {
+  width: 90%; /* Ocupa el 90% del ancho disponible */
+  max-width: 400px; /* Máximo ancho en pantallas grandes */
+  height: auto; /* Ajusta automáticamente la altura al contenido */
+  margin: 10px auto 10px 10px; /* Márgenes: arriba, automático (centrado horizontalmente), abajo, y 10px a la izquierda */
+  padding: 15px;
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.ticket-header {
+  text-align: center; /* Centra el contenido */
+  margin-bottom: 10px;
+}
+
+.ticket-header h6 img {
+  width: 25px; /* Tamaño del logo */
+  height: auto;
+  vertical-align: middle;
+}
+
+.ticket-header p {
+  font-size: 14px; /* Tamaño del texto */
+  color: #9e3939; /* Color del texto */
+  white-space: normal; /* Permite texto en varias líneas */
+  line-height: 1.5; /* Altura de línea */
+}
+
+.btn {
+  width: 100%; /* Botones ocupan todo el ancho disponible */
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-vaciar {
+  background-color: #ffcccc;
+  color: #9e3939;
+}
+
+.btn-pagar {
+  background-color: #76c893;
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .carrito-dropdown {
+    width: 95%; /* Ocupa casi todo el ancho en pantallas pequeñas */
+    max-width: none;
+    margin: 10px; /* Añade un margen uniforme en móviles */
+  }
+
+  .ticket-header p {
+    font-size: 12px; /* Texto más pequeño */
+  }
+
+  .btn {
+    font-size: 12px; /* Botones más pequeños */
+  }
+}
+
+/* Ajustes específicos para dispositivos pequeños */
+@media (max-width: 768px) {
+  .carrito-dropdown {
+    margin: 12px; /* Márgenes uniformes de 10px en todos los lados */
+  }
+}
+
 
 .carrito-total {
   color: rgb(194, 96, 78);
@@ -359,7 +448,6 @@
 }
 
 
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -385,6 +473,14 @@
 
 .dropdown-btn:hover {
   color: #f382a8;
+}
+
+.emoji-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
 }
 
 /* Estilos del botón */
@@ -1537,10 +1633,25 @@
 <div class="health-product-card">
   <img src="images/grisines.PNG" alt="grisines sin gluten" class="health-product-image">
   <h4 class="health-product-title">Grisines Queso & 4 Semillas</h4>
-  <p class="health-product-description">Grisines de queso, con 4 semillas y con queso parmesano. Clásico individual, ideal para disfrutar en cualquier momento. Sin gluten </p>
+  <p class="health-product-description">Grisines de queso sin gluten, con 4 semillas y cubierto con queso parmesano. Clásico individual, ideal para disfrutar en cualquier momento. 80g. </p>
   <button class="health-button" onclick="agregarAlCarrito('Grisines 80g  Queso, 4 Semillas.', 120)">Agregar al Carrito - $120</button>
 </div>
 
+<div class="health-product-card">
+  <img src="images/tortugasqs.png" alt="Pan Tortuga" class="health-product-image">
+  <h4 class="health-product-title">Pan Tortuga Sin Gluten</h4>
+  <p class="health-product-description">
+    Disfruta de 2 panes Tortuga saludables y sin gluten. Elige entre: con queso, con semillas, o clásico.
+  </p>
+  <select id="panTortugaTipo" class="health-product-select">
+    <option value="Con Queso">Con Queso</option>
+    <option value="Con Semillas">Con Semillas</option>
+    <option value="Clásico">Clásico</option>
+  </select>
+  <button class="health-button" onclick="agregarConSabor('Pan Tortuga', 160, 'panTortugaTipo')">
+    Agregar al Carrito - $160
+  </button>
+</div>
 
 
 
@@ -1580,6 +1691,7 @@
     <p class="health-product-description">Pan vegano de garbanzo, rico en proteínas.Sin gluten. Con semillas de girasol y zapallo</p>
     <button class="health-button" onclick="agregarAlCarrito('Pan Vegano Garbanzo', 300)">Agregar al Carrito - $300</button>
   </div>
+
   <div class="health-product-card">
     <img src="images/tortuga vegana.jpeg" alt="Tortuga Vegana" class="health-product-image">
     <h4 class="health-product-title">Tortuga Vegana</h4>
@@ -1813,13 +1925,13 @@
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  <script type="text/javascript" src="js/btn.js"></script>
  <script type="text/javascript" src="js/productsslider.js"></script>
+ <script type="text/javascript" src="js/closecarr.js"></script>
  <script type="text/javascript" src="js/sliderpro.js"></script>
  <script type="text/javascript" src="js/zoomimage.js"></script>
  <script type="text/javascript" src="js/modal.js"></script>
 
 <!-- JavaScript para el Carrito de Compras  y demas -->
 <script>
-
 
 // Obtener el botón
 let mybutton = document.getElementById("myBtn");
@@ -1965,6 +2077,15 @@ function agregarConDobleOpcion(producto, precio, opcion1Id, opcion2Id) {
     actualizarCarritoUI();
 }
 
+// Función para eliminar un producto del carrito
+function eliminarDelCarrito(producto) {
+    // Filtrar el producto que se desea eliminar
+    carrito = carrito.filter(item => item.producto !== producto);
+    // Guardar el carrito actualizado en sessionStorage
+    sessionStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarCarritoUI();
+}
+
 function actualizarCarritoUI() {
     const carritoElement = document.getElementById('carrito');
     const totalElement = document.getElementById('total');
@@ -1975,7 +2096,10 @@ function actualizarCarritoUI() {
         contadorElement.textContent = carrito.reduce((sum, item) => sum + item.cantidad, 0);
         carritoDropdown.style.display = 'block';
         carritoElement.innerHTML = carrito.map(item => 
-            `<div>${item.cantidad} x ${item.producto} - $${item.total}</div>`
+            `<div>
+                ${item.cantidad} x ${item.producto} - $${item.total} 
+                <button style="background: none; border: none; padding: 0; font: inherit; cursor: pointer;" onclick="eliminarDelCarrito('${item.producto}')">🗑</button>
+            </div>`
         ).join('');
         totalElement.innerHTML = `Total: $${carrito.reduce((sum, item) => sum + item.total, 0)}`;
     } else {
