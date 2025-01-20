@@ -5,9 +5,9 @@ var interval = 3000;
 
 // Definir imágenes locales
 const localImages = [
-  "images/alfajor delicia de coco.jpg",
-  "images/medialuna.jpg",
-  "images/trufas pagana.jpg",
+  "images/alfacoco sin azucar.png",
+  "images/postres4.png",
+  "images/arroll.png",
 ];
 
 // Establece las imágenes en el DOM

@@ -5,11 +5,8 @@
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="canonical" href="tu-url-canonical-aqui">
   
   <!-- Site Metas -->
   <meta name="keywords" content="Pagana Pastelería, pastelería sin gluten, pastelería vegana, pastelería keto, postres sin azúcar, repostería saludable, trufas sin gluten, pasteles veganos, opciones keto, colecciones de postres, dulces saludables" />
@@ -363,40 +360,13 @@ textarea.form-control:focus {
 
 
 <!-- jQery -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-<script type="text/javascript">
-  window.onload = function() {
-    emailjs.init("StnkW84Fju4K0WgiB"); // Public Key
 
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Previene el envío por defecto
-
-      const formStatus = document.getElementById('form-status');
-      const serviceID = 'service_r83mqyl';
-      const templateID = 'template_8gdumf9';
-
-      emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-          // Mostrar mensaje de éxito
-          formStatus.innerHTML = "Mensaje enviado correctamente.";
-          formStatus.style.color = 'green';
-          formStatus.style.display = 'block';
-
-          // Resetear el formulario después de enviar
-          this.reset();
-        }, (err) => {
-          // Mostrar mensaje de error
-          formStatus.innerHTML = "Error al enviar el mensaje. Por favor, intenta de nuevo.";
-          formStatus.style.color = 'red';
-          formStatus.style.display = 'block';
-        });
-    });
-  };
-</script>
 
 
 

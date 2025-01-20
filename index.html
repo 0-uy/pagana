@@ -27,6 +27,10 @@
    <!-- Owl Carousel Stylesheet -->
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
    
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+   
    <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  
@@ -582,6 +586,12 @@ font-style: normal;
     margin: 0; 
 }
 
+
+.carousel-item img {
+            height: 300px; /* Ajusta la altura de las imágenes */
+            object-fit: cover;
+        }
+
 /* Imagen dentro de la tarjeta */
 .product-image {
     width: 100%;
@@ -841,6 +851,9 @@ font-style: normal;
   }
 }
 
+/* productos presentacion carrusel  */
+
+
 
 
     .cta-button {
@@ -1090,42 +1103,48 @@ font-style: normal;
   <i class="fa fa-arrow-up"></i> 
 </button>
              
-              <section class="products-section">
-                <!-- Primer Slider -->
-                <h2 class="deli-title">Descubre Nuestros Postres</h2>
-                <div id="productSlider1" class="carousel slide mt-4" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="product-card">
-                                            <img src="images/alfajor chocolate.jpg" alt="Alfajor de Chocolate Negro" class="product-image">
-                                            <h3>Alfajor Bon o Bon de Chocolate Negro</h3>
-                                            <p>Alfajor de chocolate negro sin azúcar, relleno de una cremosa mezcla de mantequilla de maní y chocolate negro, coronado con delicados trocitos de maní tostado.</p>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="product-card">
-                                            <img src="images/alfajor blanco.jpg" alt="Alfajor de Chocolate Blanco" class="product-image">
-                                            <h3>Alfajor de Chocolate Blanco & Frambuesa</h3>
-                                            <p>Tapa sabor vainilla relleno de frambuesa, cubiertas con chocolate blanco.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="product-card">
-                                            <img src="images/paganitos.jpg" alt="Paganitos" class="product-image">
-                                            <h3>Paganitos</h3>
-                                            <p>Merengue con cobertura de chocolate.
-                                            Clásico individual, ideal para disfrutar en cualquier momento.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="container my-5">
+  <h2 class="text-center mb-4">en construccion...</h2>
+  <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1"></button>
+      </div>
+
+      <!-- Contenido del Carrusel -->
+      <div class="carousel-inner">
+          <!-- Primer conjunto de imágenes -->
+          <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                  <div class="p-2"><img src="images/alfacool.jpg" class="d-block rounded" alt="Foto 1"></div>
+                  <div class="p-2"><img src="images/postres sin azucar2.png" class="d-block rounded" alt="Foto 2"></div>
+                  <div class="p-2"><img src="images/salchi sin azucar.jpg" class="d-block rounded" alt="Foto 3"></div>
+              </div>
+          </div>
+          <!-- Segundo conjunto de imágenes -->
+          <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                  <div class="p-2"><img src="images/diamantas.png" class="d-block rounded" alt="Foto 4"></div>
+                  <div class="p-2"><img src="images/scons brunchs.jpg" class="d-block rounded" alt="Foto 5"></div>
+                  <div class="p-2"><img src="images/grisines.PNG" class="d-block rounded" alt="Foto 6"></div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Controles del Carrusel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+      </button>
+  </div>
+</div>
+
+</section>
             <br>
         <br>
 
@@ -1154,43 +1173,6 @@ font-style: normal;
 
 
 
-          
-                <!-- Segundo Slider -->
-                <div id="productSlider2" class="carousel slide mt-5" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="product-card">
-                                            <img src="images/massini.jpg" alt="Massini" class="product-image">
-                                            <h3>Massini</h3>
-                                            <p>Delicioso postre de capas de bizcochuelo esponjoso, relleno de crema chantilly y cubierto con una crujiente capa de azúcar caramelizada, creando un contraste perfecto de texturas y sabores.</p>
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="product-card">
-                                            <img src="images/alfajor duo chocolate.jpg" alt="Alfajor Duo de Chocolate" class="product-image">
-                                            <h3>Alfajor Duo de Chocolate Moras & Limon </h3>
-                                            <p>Alfajor  Sin azúcar, Tapas de Génoise sabor Limon, relleno de ganache de Moras, con chocolate semiamargo y blanco. Petalos de rosa</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="product-card">
-                                            <img src="images/rogelpagano.png" alt="Rogel" class="product-image">
-                                            <h3>Rogel</h3>
-                                            <p>Delicioso postre tradicional compuesto por varias capas de masa crujiente, intercaladas con un suave y dulce dulce de leche. Todo ello cubierto con un delicado merengue dorado, que aporta un toque esponjoso y ligeramente crujiente.<br>
-                                            Hace cualquier ocasión especial.</p>                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-      
-              </section>
 
 
               <div class="main">
@@ -1405,7 +1387,8 @@ font-style: normal;
 
  <!-- Bootstrap & jQuery Scripts -->
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  <script type="text/javascript" src="js/btn.js"></script>
  <script type="text/javascript" src="js/homelsider.js"></script>
