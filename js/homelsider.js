@@ -7,7 +7,7 @@ var interval = 3000;
 const localImages = [
   "images/alfacoco sin azucar.png",
   "images/postres4.png",
-  "images/arroll.png",
+  "images/merienda.jpg",
 ];
 
 // Establece las imágenes en el DOM

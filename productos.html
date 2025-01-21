@@ -334,6 +334,30 @@
 }
 
 
+
+.section-divider {
+    width: 100%;
+    margin: 40px 0;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    grid-column: 1 / -1;  /* Hace que ocupe todo el ancho de la grid */
+    text-align: center;
+}
+
+.section-divider h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+}
+
+.section-divider span {
+    font-size: 1.6rem;
+    color: #666;
+    margin-left: 10px;
+}
+
  /* Estilos base para la navegación */
  .nav-personalizado {
     display: flex;
@@ -525,8 +549,79 @@
     animation: none; /* Detener la animación de brillo cuando el hover está activo */
 }
 
+.product-grid {
+  margin: 20px; /* Aplica un margen uniforme de 20px en todos los lados */
+}
+
+.banner-separator {
+    width: 100%;
+    padding: 20px 0;
+    background-color: white;
+    margin: 30px 0;
+    text-align: center;
+    position: relative;
+}
+
+.banner-separator h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    display: inline-block;
+}
+
+.banner-separator span {
+    font-size: 1.6rem;
+    color: #666;
+    margin-left: 10px;
+}
+
+.banner-separator:before,
+.banner-separator:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.banner-separator:before {
+    top: 0;
+}
+
+.banner-separator:after {
+    bottom: 0;
+}
 
 
+/* bnner alfajor img */
+.alfajores-banner {
+    width: 100%;
+    height: 180px; /* Altura fija para el banner */
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 23px 36px 100 0; 
+    align-items: center;
+    margin: 10px 0;
+    padding: 20px 0;
+    background: linear-gradient(to bottom, rgb(235, 230, 230), rgb(245, 207, 207));
+    border-bottom: 1px solid #ddd;
+}
+
+.banner-image-container {
+    width: 700px; /* Ancho fijo para el contenedor */
+    height: 350px; /* Altura fija para el contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Mantiene la proporción sin estirar */
+    display: block;
+}
 
 </style>
 
@@ -707,6 +802,61 @@
       <h3 class="health-category-title">LIBRE DE GLUTEN & SIN AZUCAR</h3>
       <div class="health-grid">
 
+
+        <div class="health-product-card">
+          <img src="images/diamanta.png" alt="Diamanta" class="health-product-image">
+          <h4 class="health-product-title">Diamanta</h4>
+          <p class="health-product-description">Mousse de dulce de leche y chocolate, una combinación irresistible sin gluten y sin azúcar.</p>
+          <button class="health-button" onclick="agregarAlCarrito('Diamanta s/a', 280)">Agregar al Carrito - $280</button>
+        </div>
+        
+        <div class="health-product-card">
+          <img src="images/leomsinazucar.png" alt="Lemon Pie" class="health-product-image">
+          <h4 class="health-product-title">Lemon Pie</h4>
+          <p class="health-product-description">Suave crema de limón sobre una base crocante, cubierta con un delicado merengue. Sin gluten y sin azúcar.</p>
+          <button class="health-button" onclick="agregarAlCarrito('Lemon Pie s/a', 280)">Agregar al Carrito - $280</button>
+        </div>
+        
+        <div class="health-product-card">
+          <img src="images/rogel.png" alt="Rogel" class="health-product-image">
+          <h4 class="health-product-title">Rogel</h4>
+          <p class="health-product-description">Capas de masa crujiente intercaladas con dulce de leche y un toque de merengue. Todo sin gluten ni azúcar.</p>
+          <button class="health-button" onclick="agregarAlCarrito('Rogel s/a', 280)">Agregar al Carrito - $280</button>
+        </div>
+        
+        <div class="health-product-card">
+          <img src="images/browniesinazucar.png" alt="Brownie con Dulce de Leche y Merengue" class="health-product-image">
+          <h4 class="health-product-title">Brownie con Dulce de Leche y Merengue</h4>
+          <p class="health-product-description">Un delicioso postre individual: brownie intenso, cubierto con dulce de leche y una capa de merengue ligero. Sin azúcar y sin gluten.</p>
+          <button class="health-button" onclick="agregarAlCarrito('Brownie DllMerengue s/a ', 280)">Agregar al Carrito - $280</button>
+        </div>
+        
+      
+      
+        
+        <div class="health-product-card">
+          <img src="images/cheescackefrutosrojossintac.png" alt="Cheesecake de Frutos Rojos" class="health-product-image">
+          <h4 class="health-product-title">Cheesecake de Frutos Rojos</h4>
+          <p class="health-product-description">Cremoso cheesecake con una cubierta de frutos rojos naturales. Sin gluten y sin azúcar.</p>
+          <button class="health-button" onclick="agregarAlCarrito('Cheesecake Frutos Rojos s/a', 280)">Agregar al Carrito - $280</button>
+        </div>
+        
+      
+        <div class="health-product-card">
+          <img src="images/massini2.jpg" alt="Massini" class="health-product-image">
+          <h4 class="health-product-title">Massini</h4>
+          <p class="health-product-description">Massini sin gluten y sin azúcar.</p>
+          <button class="health-button" onclick="agregarAlCarrito('Massini s/a ', 280)">Agregar al Carrito - $280</button>
+        </div>
+      
+        <div class="health-product-card">
+          <img src="images/falsochajasinazucar.png" alt="Chajá" class="health-product-image">
+          <h4 class="health-product-title">Chajá</h4>
+          <p class="health-product-description">Un clásico uruguayo: bizcochuelo liviano, frutas frescas y crema. Hecho sin gluten y sin azúcar.</p>
+          <button class="health-button" onclick="agregarAlCarrito('Chajá s/a', 280)">Agregar al Carrito - $280</button>
+        </div>
+  
+
   <div class="health-product-card">
     <img src="images/carrot cake vegana.jpg" alt="Torta Sin Gluten y Sin Azúcar" class="health-product-image">
     <h4 class="health-product-title">Carrot Cake Sin Gluten y Sin Azúcar</h4>
@@ -749,60 +899,6 @@
     <button class="health-button" onclick="agregarAlCarrito('PRC Brownie DDL s/a ', 240)">Agregar al Carrito - $240</button>
   </div>
 
-
-  
-  <div class="health-product-card">
-    <img src="images/diamanta.png" alt="Diamanta" class="health-product-image">
-    <h4 class="health-product-title">Diamanta</h4>
-    <p class="health-product-description">Mousse de dulce de leche y chocolate, una combinación irresistible sin gluten y sin azúcar.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Diamanta s/a', 280)">Agregar al Carrito - $280</button>
-  </div>
-  
-  <div class="health-product-card">
-    <img src="images/leomsinazucar.png" alt="Lemon Pie" class="health-product-image">
-    <h4 class="health-product-title">Lemon Pie</h4>
-    <p class="health-product-description">Suave crema de limón sobre una base crocante, cubierta con un delicado merengue. Sin gluten y sin azúcar.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Lemon Pie s/a', 280)">Agregar al Carrito - $280</button>
-  </div>
-  
-  <div class="health-product-card">
-    <img src="images/rogel.png" alt="Rogel" class="health-product-image">
-    <h4 class="health-product-title">Rogel</h4>
-    <p class="health-product-description">Capas de masa crujiente intercaladas con dulce de leche y un toque de merengue. Todo sin gluten ni azúcar.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Rogel s/a', 280)">Agregar al Carrito - $280</button>
-  </div>
-  
-  <div class="health-product-card">
-    <img src="images/browniesinazucar.png" alt="Brownie con Dulce de Leche y Merengue" class="health-product-image">
-    <h4 class="health-product-title">Brownie con Dulce de Leche y Merengue</h4>
-    <p class="health-product-description">Un delicioso postre individual: brownie intenso, cubierto con dulce de leche y una capa de merengue ligero. Sin azúcar y sin gluten.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Brownie DllMerengue s/a ', 280)">Agregar al Carrito - $280</button>
-  </div>
-  
-
-
-  
-  <div class="health-product-card">
-    <img src="images/cheescackefrutosrojossintac.png" alt="Cheesecake de Frutos Rojos" class="health-product-image">
-    <h4 class="health-product-title">Cheesecake de Frutos Rojos</h4>
-    <p class="health-product-description">Cremoso cheesecake con una cubierta de frutos rojos naturales. Sin gluten y sin azúcar.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Cheesecake Frutos Rojos s/a', 280)">Agregar al Carrito - $280</button>
-  </div>
-  
-
-  <div class="health-product-card">
-    <img src="images/massini2.jpg" alt="Massini" class="health-product-image">
-    <h4 class="health-product-title">Massini</h4>
-    <p class="health-product-description">Massini sin gluten y sin azúcar.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Massini s/a ', 280)">Agregar al Carrito - $280</button>
-  </div>
-
-  <div class="health-product-card">
-    <img src="images/falsochajasinazucar.png" alt="Chajá" class="health-product-image">
-    <h4 class="health-product-title">Chajá</h4>
-    <p class="health-product-description">Un clásico uruguayo: bizcochuelo liviano, frutas frescas y crema. Hecho sin gluten y sin azúcar.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Chajá s/a', 280)">Agregar al Carrito - $280</button>
-  </div>
   
   <div class="health-product-card" id="postressa">
     <img src="images/pinitos.PNG" alt="Carrot Cake" class="health-product-image">
@@ -890,7 +986,50 @@
     <button class="health-button" onclick="agregarAlCarrito('Pasta Frola DDl s/a', 150)">Agregar al Carrito - $150</button>
   </div>
   
-    
+      </div>
+<br>
+
+       <!-- Separador fuera de los grids -->
+        <br>
+        <!-- Banner de imágenes de alfajores -->
+<div class="alfajores-banner">
+  <div class="banner-image-container">
+    <img src="images/alfacool.jpg" alt="Alfajor de Chocolate y Almendras" class="banner-image">
+  </div>
+  <div class="banner-image-container">
+    <img src="images/alfasalchi vitri.png" alt="Alfajor Alfacool" class="banner-image">
+  </div>
+  <div class="banner-image-container">
+    <img src="images/alfa moras limon.png" alt="Alfajor Moras Limón" class="banner-image">
+  </div>
+</div>
+  <div class="health-category-title">
+    <h2>Nuestros Alfajores <small>sin azúcar</small></h2>
+  </div>
+
+  <div class="health-grid">
+
+  <div class="health-product-card">
+    <img src="images/alfajor pagana.jpg" alt="Alfajor choco almendras" id="alfasinazucar" class="health-product-image">
+    <h4 class="health-product-title">Alfajor de Chocolate y Almendras</h4>
+    <p class="health-product-description">Alfajor Tapas de brownie  relleno de dulce de leche y almendras cubierto por chococlate y trozos de almendra, sin azucar sin gluten.</p>
+    <button class="health-button" onclick="agregarAlCarrito('Alfa Choco Almendras s/a', 130)">Agregar al Carrito - $130</button>
+  </div>
+
+  <div class="health-product-card">
+    <img src="images/alfajores de DDL Sin Gluten & Sin Azuca.jpg" alt="Alfajor de Nueces" class="health-product-image">
+    <h4 class="health-product-title">Alfajor de Nueces</h4>
+    <p class="health-product-description">Tapas de brownie, relleno de dulce de leche con nueces, cubierto con chocolate blanco y trozos de nueces. Una combinación perfecta de texturas y sabores.</p>
+    <button class="health-button" onclick="agregarAlCarrito('Alfa Nueces s/a', 130)">Agregar al Carrito - $130</button>
+  </div>
+  
+  <div class="health-product-card">
+    <img src="images/alfajorcacao.PNG" alt="Sablé Negro" class="health-product-image">
+    <h4 class="health-product-title">Alfajor Sablé Negro</h4>
+    <p class="health-product-description">Tapas de masa sablé de cacao, relleno de dulce de leche, cubierto con chocolate negro y un toque de cacao. Un postre elegante y delicioso.</p>
+    <button class="health-button" onclick="agregarAlCarrito('Alfa sable negr s/a' , 130)">Agregar al Carrito - $130</button>
+  </div>
+  
 
   <div class="health-product-card" >
     <img src="images/espejitos sin gluten.PNG" alt="espejito sin gluten" class="health-product-image">
@@ -927,28 +1066,6 @@
   </div>
 
 
-
-  <div class="health-product-card">
-    <img src="images/alfajor pagana.jpg" alt="Alfajor choco almendras" id="alfasinazucar" class="health-product-image">
-    <h4 class="health-product-title">Alfajor de Chocolate y Almendras</h4>
-    <p class="health-product-description">Alfajor Tapas de brownie  relleno de dulce de leche y almendras cubierto por chococlate y trozos de almendra, sin azucar sin gluten.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Alfa Choco Almendras s/a', 130)">Agregar al Carrito - $130</button>
-  </div>
-
-  <div class="health-product-card">
-    <img src="images/alfajores de DDL Sin Gluten & Sin Azuca.jpg" alt="Alfajor de Nueces" class="health-product-image">
-    <h4 class="health-product-title">Alfajor de Nueces</h4>
-    <p class="health-product-description">Tapas de brownie, relleno de dulce de leche con nueces, cubierto con chocolate blanco y trozos de nueces. Una combinación perfecta de texturas y sabores.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Alfa Nueces s/a', 130)">Agregar al Carrito - $130</button>
-  </div>
-  
-  <div class="health-product-card">
-    <img src="images/alfajorcacao.PNG" alt="Sablé Negro" class="health-product-image">
-    <h4 class="health-product-title">Alfajor Sablé Negro</h4>
-    <p class="health-product-description">Tapas de masa sablé de cacao, relleno de dulce de leche, cubierto con chocolate negro y un toque de cacao. Un postre elegante y delicioso.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Alfa sable negr s/a' , 130)">Agregar al Carrito - $130</button>
-  </div>
-  
   <div class="health-product-card">
   <img src="images/alfafrutosecosvegan.jpg" alt="Alfajor Frutos Secos" class="health-product-image">
   <h4 class="health-product-title">Alfajor Frutos Secos</h4>
@@ -1025,8 +1142,10 @@
   </div>
 
 
-</div>
+</div> 
+  </div>
 
+ 
 
   <br>
 
@@ -1126,7 +1245,7 @@
 </div>
 
 <div class="health-product-card">
-  <img src="images/lemonconazucarslice.png" alt="Lemon Pie Vegano" class="health-product-image">
+  <img src="images/lemonconazucarslice.png" alt="Lemon Pie" class="health-product-image">
   <h4 class="health-product-title">Lemon</h4>
   <p class="health-product-description">Exquisita rebanada de lemon pie con una base suave y una cobertura de merengue. Ideal para cualquier ocasión.</p>
   <button class="health-button" onclick="agregarAlCarrito('Lemon c/a', 280)">Agregar al Carrito - $280</button>
@@ -1187,8 +1306,8 @@
 <!-- Seccion de Alfajores ---> 
 
 
-<div id="alfajores">
-  <h2 class="health-category-title">Nuestros Alfajores <small> con azúcar</small> </h2> 
+<div id="alfajores" style="margin: 20px;">
+  <h2 class="health-category-title" >Nuestros Alfajores <small> con azúcar</small> </h2> 
 
   <div class="product-grid">
   <div class="health-product-card">
@@ -1301,8 +1420,8 @@
 
   <!-- GLUTEN FREE & VEGANO ------------------------>
   <div id="vegano" class="health-category">
-    <h3 class="health-category-title">GLUTEN FREE & VEGANO</h3>
-    <div class="health-grid">
+    <h3 class="health-category-title" style="margin: 20px;">GLUTEN FREE & VEGANO</h3>
+    <div class="health-grid" style="margin: 20px;">
 
       <div class="health-product-card">
         <img src="images/pan garbanzo.jpeg" alt="Pan Vegano de Garbanzo" id="saladvegan" class="health-product-image">
@@ -1335,7 +1454,7 @@
       </div>
       
       <div class="health-product-card">
-        <img src="images/brownie vegano pink.png" alt="Brownie con Ganache de Chocolate Vegano" class="health-product-image">
+        <img src="images/brownie vegano pink.png" id="dulcevegan" alt="Brownie con Ganache de Chocolate Vegano" class="health-product-image">
         <h4 class="health-product-title">Brownie con Ganache de Chocolate Vegano</h4>
         <p class="health-product-description">Brownie denso y delicioso, cubierto con una ganache de chocolate cremosa. Una opción vegana, sin azúcar y sin gluten.</p>
         <button class="health-button" onclick="agregarAlCarrito('Brownie Ganache Chocolate Vegano', 280)">Agregar al Carrito - $280</button>
@@ -1419,9 +1538,9 @@
 
   <!-- OTROS PRODUCTOS  momentos --------------------------------------------->
  
-  <div id="momentos" class="health-category"id="momentosdulces"></div>
-    <h3 class="health-category-title">Momentos para Disfrutar</h3>
-    <div class="health-grid">
+  <div id="momentos" class="health-category" id="momentosdulces"></div>
+    <h3 class="health-category-title" style="margin: 20px;">Momentos para Disfrutar</h3>
+    <div class="health-grid" style="margin: 20px;">
 
 
    <!-- Trufas Sin Azúcar -->
@@ -1570,8 +1689,8 @@
 
 
 <div id="salado" class="health-category">
-  <h3 class="health-category-title">LIBRE DE GLUTEN SALADO</h3>
-  <div class="health-grid">
+  <h3 class="health-category-title"style="margin: 20px;">LIBRE DE GLUTEN SALADO</h3>
+  <div class="health-grid"style="margin: 20px;">
 
     <div class="health-product-card">
       <img src="images/sand pan blanco.PNG" alt="sandwiche pan blanco a Sin Gluten"  id="copetin" class="health-product-image">
@@ -1602,62 +1721,7 @@
       <button class="health-button" onclick="agregarAlCarrito('Sand Pan nuez s/a', 190)">Agregar al Carrito - $190</button>
     </div>
     
-   
-<div class="health-product-card">
-  <img src="images/bagel.png" alt="Bagels Jamón Serrano con Queso Crema" class="health-product-image">
-  <h4 class="health-product-title">Bagels<br>Jamón Serrano con Queso Crema</h4>
-  <p class="health-product-description">
-    Deliciosos bagels con semillas de sésamo y girasol. Incluyen jamón serrano y queso crema. Bandeja x 2.
-  </p>
   
-  
-  <button class="health-button" onclick="agregarAlCarrito('Bagel J.Serrano QCrema x2 ', 230)">Agregar al Carrito - $230</button>
-</div>
-
-<div class="health-product-card">
-  <img src="images/bagel.png" alt="Bagels Jamón y Queso Crema" class="health-product-image">
-  <h4 class="health-product-title">Bagels<br>Jamón y Queso Crema</h4>
-  <p class="health-product-description">
-    Bagels con semillas de sésamo y girasol, rellenos de jamón y queso crema. Bandeja x 2.
-  </p>
-  <button class="health-button" onclick="agregarAlCarrito('Bagel Jamón Q Crema x2 ', 200)">Agregar al Carrito - $200</button>
- 
-</div>
-
-<div class="health-product-card">
-  <img src="images/grisines.PNG" alt="grisines sin gluten" class="health-product-image">
-  <h4 class="health-product-title">Grisines Queso & 4 Semillas</h4>
-  <p class="health-product-description">Grisines de queso sin gluten, con 4 semillas y cubierto con queso parmesano. Clásico individual, ideal para disfrutar en cualquier momento. 80g. </p>
-  <button class="health-button" onclick="agregarAlCarrito('Grisines 80g  Queso, 4 Semillas.', 120)">Agregar al Carrito - $120</button>
-</div>
-
-<div class="health-product-card">
-  <img src="images/crackers de queso.jpeg" alt="Galletas Crackers de Queso" class="health-product-image">
-  <h4 class="health-product-title">Galletas Crackers de Queso</h4>
-  <p class="health-product-description">Deliciosas y crujientes galletas crackers de queso. Perfectas para disfrutar como snack. Paquete de 60g.</p>
-  <button class="health-button" onclick="agregarAlCarrito('Crackers Queso', 130)">Agregar al Carrito - $130</button>
-</div>
-
-
-
-<div class="health-product-card">
-  <img src="images/tortugasqs.png" alt="Pan Tortuga" class="health-product-image">
-  <h4 class="health-product-title">Pan Tortuga Sin Gluten</h4>
-  <p class="health-product-description">
-    Disfruta de 2 panes Tortuga saludables y sin gluten. Elige entre: con queso, con semillas, o clásico.
-  </p>
-  <select id="panTortugaTipo" class="health-product-select">
-    <option value="Con Queso">Con Queso</option>
-    <option value="Con Semillas">Con Semillas</option>
-    <option value="Clásico">Clásico</option>
-  </select>
-  <button class="health-button" onclick="agregarConSabor('2 Pan Tortuga', 160, 'panTortugaTipo')">
-    Agregar al Carrito - $160
-  </button>
-</div>
-
-
-
   <div class="health-product-card">
     <img src="images/pan feteado.jpg" alt="Pan Rebanado"  class="health-product-image">
     <h4 class="health-product-title">Pan de molde rebanado sin gluten</h4>
@@ -1665,10 +1729,9 @@
     <button class="health-button" onclick="agregarAlCarrito('Pan Rebanado', 290)">Agregar al Carrito - $290</button>
   </div>
   
-
   
   <div class="health-product-card">
-    <img src="images/pan keto.jpeg" alt="Pan Keto de Almendra y Lino" class="health-product-image">
+    <img src="images/pan keto.jpeg" alt="Pan Keto de Almendra y Lino" id="saladogl" class="health-product-image">
     <h4 class="health-product-title">Pan Keto de Almendra y Lino</h4>
     <p class="health-product-description">Pan keto ideal para dietas bajas en carbohidratos. Sin gluten</p>
     <button class="health-button" onclick="agregarAlCarrito('Pan Keto Almendra Lino', 400)">Agregar al Carrito - $400</button>
@@ -1689,7 +1752,7 @@
   </div>
   
   <div class="health-product-card">
-    <img src="images/pan garbanzo.jpeg" alt="Pan Vegano de Garbanzo"  id="saladogl" class="health-product-image">
+    <img src="images/pan garbanzo.jpeg" alt="Pan Vegano de Garbanzo"  class="health-product-image">
     <h4 class="health-product-title">Pan Vegano de Garbanzo</h4>
     <p class="health-product-description">Pan vegano de garbanzo, rico en proteínas.Sin gluten. Con semillas de girasol y zapallo</p>
     <button class="health-button" onclick="agregarAlCarrito('Pan Vegano Garbanzo', 300)">Agregar al Carrito - $300</button>
@@ -1702,37 +1765,92 @@
     <button class="health-button" onclick="agregarAlCarrito('Tortuga Vegana', 64)">Agregar al Carrito - $64</button>
   </div>
   
-
-<div class="health-product-card">
-  <img src="images/cuernitos.jpg" alt="Bizcochos" class="health-product-image">
-  <h4 class="health-product-title">Bizcocho  cuernito de queso x1</h4>
-  <p class="health-product-description">Bizcocho sin gluten para acompañar el té o el café. Cuernito de queso parmesano.</p>
-  <button class="health-button" onclick="agregarAlCarrito('Biz. x1 Cuernito Queso', 45)">Agregar al Carrito - $45</button>
-</div>
-
-<div class="health-product-card">
-  <img src="images/cuernitos.jpg" alt="Bizcochos" class="health-product-image">
-  <h4 class="health-product-title">Bizcochos cuernito de queso x4</h4>
-  <p class="health-product-description"> Bizcochos sin gluten, para acompañar el té o el café. Cuernito de queso parmesano.
-    probalos calientes! 
-  </p>
-  <button class="health-button" onclick="agregarAlCarrito('Bizcochos x4 salado', 100)">Agregar al Carrito - $100</button>
-</div>
-
-
   <div class="health-product-card">
-    <img src="images/sconsproducto.jpg" alt="Scones" class="health-product-image">
-    <h4 class="health-product-title">Scons de queso x1 </h4>
-    <p class="health-product-description">Scones frescos sin gluten , de queso parmesano! Perfectos para el desayuno o la merienda.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Scones', 45)">Agregar al Carrito - $45</button>
-</div>
-
-  <div class="health-product-card">
-    <img src="images/sconsingluten.jpg" alt="Scones" class="health-product-image">
-    <h4 class="health-product-title">Scons de queso x6 </h4>
-    <p class="health-product-description">Scones frescos sin gluten , de queso parmesano! Perfectos para el desayuno o la merienda.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Scones x6', 270)">Agregar al Carrito - $270</button>
+    <img src="images/tortugasqs.png" alt="Pan Tortuga" class="health-product-image">
+    <h4 class="health-product-title">Pan Tortuga Sin Gluten</h4>
+    <p class="health-product-description">
+      Disfruta de 2 panes Tortuga saludables y sin gluten. Elige entre: con queso, con semillas, o clásico.
+    </p>
+    <select id="panTortugaTipo" class="health-product-select">
+      <option value="Con Queso">Con Queso</option>
+      <option value="Con Semillas">Con Semillas</option>
+      <option value="Clásico">Clásico</option>
+    </select>
+    <button class="health-button" onclick="agregarConSabor('2 Pan Tortuga', 160, 'panTortugaTipo')">
+      Agregar al Carrito - $160
+    </button>
   </div>
+
+  <div class="health-product-card">
+    <img src="images/cuernitos.jpg" alt="Bizcochos" class="health-product-image">
+    <h4 class="health-product-title">Bizcocho  cuernito de queso x1</h4>
+    <p class="health-product-description">Bizcocho sin gluten para acompañar el té o el café. Cuernito de queso parmesano.</p>
+    <button class="health-button" onclick="agregarAlCarrito('Biz. x1 Cuernito Queso', 45)">Agregar al Carrito - $45</button>
+  </div>
+  
+  <div class="health-product-card">
+    <img src="images/cuernitos.jpg" alt="Bizcochos" class="health-product-image">
+    <h4 class="health-product-title">Bizcochos cuernito de queso x4</h4>
+    <p class="health-product-description"> Bizcochos sin gluten, para acompañar el té o el café. Cuernito de queso parmesano.
+      probalos calientes! 
+    </p>
+    <button class="health-button" onclick="agregarAlCarrito('Bizcochos x4 salado', 100)">Agregar al Carrito - $100</button>
+  </div>
+  
+  
+    <div class="health-product-card">
+      <img src="images/sconsproducto.jpg" alt="Scones" class="health-product-image">
+      <h4 class="health-product-title">Scons de queso x1 </h4>
+      <p class="health-product-description">Scones frescos sin gluten , de queso parmesano! Perfectos para el desayuno o la merienda.</p>
+      <button class="health-button" onclick="agregarAlCarrito('Scones', 45)">Agregar al Carrito - $45</button>
+  </div>
+  
+    <div class="health-product-card">
+      <img src="images/sconsingluten.jpg" alt="Scones" class="health-product-image">
+      <h4 class="health-product-title">Scons de queso x6 </h4>
+      <p class="health-product-description">Scones frescos sin gluten , de queso parmesano! Perfectos para el desayuno o la merienda.</p>
+      <button class="health-button" onclick="agregarAlCarrito('Scones x6', 270)">Agregar al Carrito - $270</button>
+    </div>
+
+  <div class="health-product-card">
+    <img src="images/bagel.png" alt="Bagels Jamón Serrano con Queso Crema" class="health-product-image">
+    <h4 class="health-product-title">Bagels<br>Jamón Serrano con Queso Crema</h4>
+    <p class="health-product-description">
+      Deliciosos bagels con semillas de sésamo y girasol. Incluyen jamón serrano y queso crema. Bandeja x 2.
+    </p>
+    
+    
+    <button class="health-button" onclick="agregarAlCarrito('Bagel J.Serrano QCrema x2 ', 230)">Agregar al Carrito - $230</button>
+  </div>
+  
+  <div class="health-product-card">
+    <img src="images/bagel.png" alt="Bagels Jamón y Queso Crema" class="health-product-image">
+    <h4 class="health-product-title">Bagels<br>Jamón y Queso Crema</h4>
+    <p class="health-product-description">
+      Bagels con semillas de sésamo y girasol, rellenos de jamón y queso crema. Bandeja x 2.
+    </p>
+    <button class="health-button" onclick="agregarAlCarrito('Bagel Jamón Q Crema x2 ', 200)">Agregar al Carrito - $200</button>
+   
+  </div>
+  
+  
+  
+  <div class="health-product-card">
+    <img src="images/grisines.PNG" alt="grisines sin gluten" class="health-product-image">
+    <h4 class="health-product-title">Grisines Queso & 4 Semillas</h4>
+    <p class="health-product-description">Grisines de queso sin gluten, con 4 semillas y cubierto con queso parmesano. Clásico individual, ideal para disfrutar en cualquier momento. 80g. </p>
+    <button class="health-button" onclick="agregarAlCarrito('Grisines 80g  Queso, 4 Semillas.', 120)">Agregar al Carrito - $120</button>
+  </div>
+  
+  <div class="health-product-card">
+    <img src="images/crackers de queso.jpeg" alt="Galletas Crackers de Queso" class="health-product-image">
+    <h4 class="health-product-title">Galletas Crackers de Queso</h4>
+    <p class="health-product-description">Deliciosas y crujientes galletas crackers de queso. Perfectas para disfrutar como snack. Paquete de 60g.</p>
+    <button class="health-button" onclick="agregarAlCarrito('Crackers Queso', 130)">Agregar al Carrito - $130</button>
+  </div>
+  
+  
+
 
 
 <div class="health-product-card">
@@ -1809,7 +1927,7 @@
 
         <!-- Banner -->
         <div class="health-banner">
-          <img src="images/medialuna rellena.jpg" alt="Banner de Alfajores" class="banner-image">
+          <img src="images/medialuna rellena.jpg" alt="medialuna" class="banner-image">
         </div>
         
 <hr>
