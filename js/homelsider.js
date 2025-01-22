@@ -6,7 +6,7 @@ var interval = 3000;
 // Definir imágenes locales
 const localImages = [
   "images/alfacoco sin azucar.png",
-  "images/postres4.png",
+  "images/rogelpagano.png",
   "images/merienda.jpg",
 ];
 
