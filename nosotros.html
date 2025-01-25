@@ -328,6 +328,55 @@ hr {
   margin: 15px 0; /* Espaciado superior e inferior de la línea */
 }
 
+ /* Ajustes generales para dispositivos móviles */
+ @media (max-width: 768px) {
+    .logcom {
+      display: block;
+      margin: 0 auto 20px; /* Centra el logo y aumenta el margen inferior */
+      height: 50px; /* Tamaño adecuado del logo */
+    }
+
+    .detail-box h1 {
+      font-size: 1.6rem; /* Ajusta el tamaño del título */
+      margin-bottom: 15px; /* Agrega espacio debajo del título */
+      text-align: center; /* Centra el texto */
+    }
+
+    .detail-box p {
+      font-size: 1.1rem; /* Ajusta el tamaño del texto */
+      line-height: 1.5; /* Incrementa la separación entre líneas */
+      text-align: center; /* Centra el contenido */
+      margin-bottom: 20px; /* Agrega espacio debajo del párrafo */
+    }
+
+    .btn-box {
+      text-align: center; /* Centra el botón */
+      margin-top: 10px; /* Asegura separación del contenido superior */
+    }
+  }
+
+  /* Ajustes específicos para pantallas muy pequeñas */
+  @media (max-width: 576px) {
+    .logcom {
+      height: 45px; /* Tamaño un poco más reducido para el logo */
+      margin-bottom: 25px; /* Más separación debajo del logo */
+    }
+
+    .detail-box h1 {
+      font-size: 1.4rem; /* Reduce un poco el tamaño del título */
+      margin-bottom: 20px; /* Espacio adicional debajo del título */
+    }
+
+    .detail-box p {
+      font-size: 1rem; /* Tamaño cómodo para pantallas pequeñas */
+      line-height: 1.6; /* Incrementa la separación entre líneas */
+    }
+
+    .btn-box {
+      margin-top: 15px; /* Más separación antes del botón */
+    }
+  }
+
 </style>
  <!-- Bootstrap & jQuery Scripts -->
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
