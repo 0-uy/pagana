@@ -175,6 +175,7 @@
   font-size: 1.5rem;
   color: #f39292; /* Color oscuro para texto */
   margin: 10px;
+  z-index: 0;
 }
 .btn-vaciar {
   background-color: rgb(250, 73, 73);
@@ -665,10 +666,11 @@
           <label for="fechaRetiro">Fecha de retiro o entrega:</label>
           <input type="date" id="fechaRetiro" name="fechaRetiro" class="form-control" required>
         </div>
-
+        <small>(Aviso: Productos en stock disponibles de inmediato. Algunos artículos pueden requerir de 24 a 72 horas, según disponibilidad y producción. )</small>
         <!-- Campos que ocupan todo el ancho -->
         <div class="form-group full-width">
-          <label for="notas">Notas:</label>
+          <label for="notas">Notas: 
+          </label>
 <textarea id="notas" name="notas" class="form-control" rows="3" placeholder="Agrega aquí tus preferencias, detalles del pedido o instrucciones especiales..."></textarea>
 
         </div>
@@ -684,7 +686,7 @@
         </div>
 
         <!-- Botones al final -->
-        <p style="color: rgb(107, 61, 61); font-size: 0.6em;">Tu pedido será enviado a WhatsApp para confirmar los detalles de la compra.</p>
+        <p style="color: rgb(107, 61, 61); font-size: 0.6em;">Tu pedido será enviado a WhatsApp para confirmar los detalles de la compra con nuestro equipo.</p>
         <div class="button-container">
           <button type="submit" class="btn-enviar">Realizar Pedido</button>
           <button type="button" class="btn btn-danger" onclick="cerrarFormulario()">Cancelar</button>
@@ -716,7 +718,7 @@
 
 <section class="health-product-section">
   <div class="health-container" id="productos">
-    <h1 class="logcom">PAGANA PASTELERÍA</h1><br><br>
+    <h1 class="logcom">PAGANA PASTELERÍAx</h1><br><br>
     <h2 class="health-heading" style="margin-top: 18px; margin-bottom: -4px">Nuestros Productos Saludables</h2>
 
     <a href="index.html">
@@ -921,7 +923,7 @@
     <img src="images/pinitos.PNG" alt="Carrot Cake" class="health-product-image">
     <h4 class="health-product-title">Pinitos x 6</h4>
     <p class="health-product-description">Pinitos , base de vainilla, copo de dulce de leche  cubierto por chocolate, sin gluten.</p>
-    <button class="health-button" onclick="agregarAlCarrito('Pinitos x6 s/a', 183)">Agregar al Carrito - $183</button>
+    <button class="health-button" onclick="agregarAlCarrito('Pinitos x6 s/a', 229)">Agregar al Carrito - $229</button>
   </div>
 
   <div class="health-product-card">
@@ -1212,7 +1214,7 @@
   <img src="images/pinitos.PNG" alt="Carrot Cake" class="health-product-image">
   <h4 class="health-product-title">Pinitos x 6</h4>
   <p class="health-product-description">Pinitos , base de vainilla, copo de dulce de leche  cubierto por chocolate, sin gluten.</p>
-  <button class="health-button" onclick="agregarAlCarrito('Pinitos x6 c/a', 183)">Agregar al Carrito - $183</button>
+  <button class="health-button" onclick="agregarAlCarrito('Pinitos x6 c/a', 229)">Agregar al Carrito - $229</button>
 </div>
 
 
@@ -1463,7 +1465,7 @@
       <div class="health-product-card">
         <img src="images/crackervegana.png" alt="Galletas Crackers veganas chia lino sin gluten, galletas saladas veganas, galletas veganas Uruguayass="health-product-image">
         <h4 class="health-product-title"> Crackers  Chia & Lino</h4>
-        <p class="health-product-description">Crujientes galletas crackers chia y lino, con toda la proteina del harina de garbanzo.</p>
+        <p class="health-product-description">Crujientes galletas crackers chia y lino <!--con toda la proteina del harina de garbanzo-->.</p>
         <button class="health-button" onclick="agregarAlCarrito('Crackers Veganas', 130)">Agregar al Carrito - $130</button>
       </div>
       
@@ -1880,7 +1882,7 @@
   
   
   <div class="health-product-card">
-    <img src="images/grisines.PNG" alt="grisines sin gluten , grisines de queso y semilla sin glunte, grisines sin gluten uruguay, grisines sin gluten canelones" class="health-product-image">
+    <img src="images/grisines.jpg" alt="grisines sin gluten , grisines de queso y semilla sin glunte, grisines sin gluten uruguay, grisines sin gluten canelones" class="health-product-image">
     <h4 class="health-product-title">Grisines Queso & 4 Semillas</h4>
     <p class="health-product-description">Grisines de queso sin gluten, con 4 semillas y cubierto con queso parmesano. Clásico individual, ideal para disfrutar en cualquier momento. 80g. </p>
     <button class="health-button" onclick="agregarAlCarrito('Grisines 80g Queso, 4 Semillas.', 120)">Agregar al Carrito - $120</button>
@@ -1897,7 +1899,7 @@
   <div class="health-product-card">
     <img src="images/crackervegana.png" alt="Galletas Crackers veganas chia lino sin gluten, galletas saladas veganas, galletas veganas Uruguayass="health-product-image">
     <h4 class="health-product-title">Galletas Crackers Veganas Chia & Lino</h4>
-    <p class="health-product-description">Crujientes galletas crackers chia y lino, con toda la proteina del harina de garbanzo.</p>
+    <p class="health-product-description">Crujientes galletas crackers chia y lino<!--con toda la proteina del harina de garbanzo-->.</p>
     <button class="health-button" onclick="agregarAlCarrito('Crackers Veg chLino', 130)">Agregar al Carrito - $130</button>
   </div>
   
