@@ -634,6 +634,10 @@
       <img src="images/cup.png" alt="Logo" style="width: 42px; height: auto; margin-right: 10px;">
     </h3>
     <h5>¡Gracias por elegirnos, te esperamos pronto!</h5>
+    <p style="color: rgb(248, 168, 181); font-size: small;">
+      ¿Dudas? Visita nuestra <a href="como-comprar.html">página de Como Comprar</a> para más detalles.
+    </p>
+    
     <form id="pedidoForm" onsubmit="return false;">
       <div class="form-grid">
         <!-- Primera columna -->
@@ -718,7 +722,7 @@
 
 <section class="health-product-section">
   <div class="health-container" id="productos">
-    <h1 class="logcom">PAGANA PASTELERÍAx</h1><br><br>
+    <h1 class="logcom">PAGANA PASTELERÍA</h1><br><br>
     <h2 class="health-heading" style="margin-top: 18px; margin-bottom: -4px">Nuestros Productos Saludables</h2>
 
     <a href="index.html">
@@ -989,7 +993,7 @@
 
 
   <div class="health-product-card">
-    <img src="images/galletas d.jpg" alt="Galletas sin gluten" class="health-product-image">
+    <img src="images/galletas.jpeg" alt="Galletas sin gluten" class="health-product-image">
     <h4 class="health-product-title">Galletas</h4>
     <p class="health-product-description">Pack de 12 galletas, sin azucar, sin gluten varios sabores.</p>
     <button class="health-button" onclick="agregarAlCarrito('Pack 12 Galletas varios sabores s/a', 300)">Agregar al Carrito - $300</button>
@@ -1183,9 +1187,9 @@
 
       
   <div class="health-product-card" id="postresca">
-    <img src="images/tortas pedido.jpg" alt="Porción de Torta" class="health-product-image">
+    <img src="images/porcion de torta.jpg" alt="Porción de Torta sin gluten " class="health-product-image">
     <h4 class="health-product-title">Porción de Torta</h4>
-    <p class="health-product-description">Porción individual de torta sin gluten. </p>
+    <p class="health-product-description">Porción individual de torta sin gluten. Brownie Chocolate, Dulce de Leche, Merengie </p>
     <button class="health-button" onclick="agregarAlCarrito('Porción Torta', 240)">Agregar al Carrito - $240</button>
   </div>
 
@@ -1248,7 +1252,7 @@
 
 
 <div class="health-product-card">
-  <img src="images/galletacacao.jpg" alt="Galletas sin gluten, pagana cafeteria " class="health-product-image">
+  <img src="images/galletas.jpeg" alt="Galletas sin gluten, pagana cafeteria " class="health-product-image">
   <h4 class="health-product-title">Galletas</h4>
   <p class="health-product-description">Pack de 12 galletas sin gluten varios sabores, Limon & Coco, Cacaco & Chocolate, Vainilla Trozos de Chocolate</p>
   <button class="health-button" onclick="agregarAlCarrito('Pack 12 Galletas varios sabores s/a', 300)">Agregar al Carrito - $300</button>
@@ -1766,6 +1770,14 @@
       <p class="health-product-description">Pan de nuez s/a con queso estilo Philadelphia y jamón </p>
       <button class="health-button" onclick="agregarAlCarrito('Sand Pan nuez s/a', 190)">Agregar al Carrito - $190</button>
     </div>
+
+    <div class="health-product-card">
+      <img src="images/chipa.jpg" alt="chipa , sin gluten en la costa" class="health-product-image">
+      <h4 class="health-product-title">Chipa de queso x4 </h4>
+      <p class="health-product-description">Chipas de quesos bandeja x 4. Probalos calentitos. 140g</p>
+      <button class="health-button" onclick="agregarAlCarrito('Chipa x4', 220)">Agregar al Carrito - $220</button>
+    </div>
+
     
   
   <div class="health-product-card">
@@ -1995,10 +2007,38 @@
 
 
 <div class="health-product-card">
+  <img src="images/carro.png" alt="Empanadas sin gluten , empadas intolerante, empanada sin lacteos, empanada vegana, empada sin gluten de queso y panceta, empanada de jamon y queso sin tacc, empanada de carne sin gluten, empanadas sin gluten Uruguay class="health-product-image">
+  <h4 class="health-product-title">Empanadas x 18 congeladas sin hornear</h4>
+  <p class="health-product-description">Empanadas artesanales, bandeja de 18 unidades congeladas sin hornear. Sin gluten</p>
+  
+  <!-- Selector de sabor para empanadas -->
+  <select id="empanadasSabor" class="health-product-select">
+    <option value="Jamón y Queso">Jamón y Queso</option>
+    <option value="Pollo">Pollo</option>
+    <option value="Carne">Carne</option>
+    <option value="Verdura">Verdura</option>
+    <option value="Caprese">Caprese</option>
+  </select>
+
+  <!-- Botón para agregar al carrito -->
+  <button class="health-button" onclick="agregarConSabor('Empanadas cong x18)', 1440, 'empanadasSabor')">Agregar al Carrito - $1440</button>
+</div>
+
+
+<div class="health-product-card">
   <img src="images/carro.png" alt="SANDWICH OLIMPICO  sin gluten, OLIMPICO tacc uruguay, SANDWICH  sin harina de trigo uruguay, pizza solymar,sin gluten ciudad de la costa" id="alcena" class="health-product-image">
   <h4 class="health-product-title">Sandwich Olimpico </h4>
   <p class="health-product-description">Sandwich de pan blanco sin gluten, mayonesa, jamon, queso, lechuga, tomate, huevo.</p>
   <button class="health-button" onclick="agregarAlCarrito('Sandwich Olimpico', 190)">Agregar al Carrito - $190</button>
+</div>
+
+
+
+<div class="health-product-card">
+  <img src="images/carro.png" alt="SANDWICH OLIMPICO  sin gluten, OLIMPICO tacc uruguay, SANDWICH  sin harina de trigo uruguay, pizza solymar,sin gluten ciudad de la costa" id="alcena" class="health-product-image">
+  <h4 class="health-product-title">Sandwich Olimpico x2  </h4>
+  <p class="health-product-description">Sandwich olimpico, 4 triangulos, Pan blanco sin gluten, mayonesa, jamon, queso, lechuga, tomate, huevo.</p>
+  <button class="health-button" onclick="agregarAlCarrito('Sandwich Olimpico x2 ', 380)">Agregar al Carrito - $380</button>
 </div>
 
 </div>
