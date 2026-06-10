@@ -336,6 +336,36 @@ textarea.form-control {
   }
 }
 
+.fecha-wrapper {
+  position: relative;
+}
+
+.fecha-wrapper input[type="date"] {
+  color: transparent;
+  position: relative;
+}
+
+.fecha-wrapper input[type="date"]::-webkit-datetime-edit,
+.fecha-wrapper input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+.fecha-wrapper input[type="date"]::-webkit-datetime-edit-text,
+.fecha-wrapper input[type="date"]::-webkit-datetime-edit-month-field,
+.fecha-wrapper input[type="date"]::-webkit-datetime-edit-day-field,
+.fecha-wrapper input[type="date"]::-webkit-datetime-edit-year-field {
+  color: transparent;
+}
+
+.fecha-display {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+  font-size: 0.95rem;
+  font-family: inherit;
+  pointer-events: none;
+  background: transparent;
+}
+
 .close {
   position: absolute;
   top: 10px;
@@ -847,7 +877,10 @@ textarea.form-control {
 
         <div class="form-group">
           <label for="fechaRetiro">Fecha de retiro o entrega:</label>
-          <input type="date" id="fechaRetiro" name="fechaRetiro" class="form-control" required>
+          <div class="fecha-wrapper">
+            <input type="date" id="fechaRetiro" name="fechaRetiro" class="form-control" required>
+            <span id="fechaRetiroDisplay" class="fecha-display"></span>
+          </div>
           <small style="color: #c0392b;">⏰ La fecha mínima es 72 horas desde hoy.</small>
         </div>
         <small>(Aviso: Productos en stock disponibles de inmediato. Algunos artículos pueden requerir de 24 a 72 horas, según disponibilidad y producción. )</small>
@@ -2340,6 +2373,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fecha mínima: 72 horas desde ahora
     const fechaInput = document.getElementById('fechaRetiro');
+    const fechaDisplay = document.getElementById('fechaRetiroDisplay');
+    function actualizarFechaDisplay() {
+        if (fechaInput && fechaDisplay) {
+            if (fechaInput.value) {
+                const [y, m, d] = fechaInput.value.split('-');
+                fechaDisplay.textContent = `${d}/${m}/${y}`;
+            } else {
+                fechaDisplay.textContent = '';
+            }
+        }
+    }
     if (fechaInput) {
         const ahora = new Date();
         ahora.setHours(ahora.getHours() + 72);
@@ -2348,6 +2392,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const dd = String(ahora.getDate()).padStart(2, '0');
         fechaInput.min = `${yyyy}-${mm}-${dd}`;
         fechaInput.value = `${yyyy}-${mm}-${dd}`;
+        actualizarFechaDisplay();
+        fechaInput.addEventListener('change', actualizarFechaDisplay);
+        fechaInput.addEventListener('input', actualizarFechaDisplay);
     }
 
     const formulario = document.getElementById('pedidoForm');
