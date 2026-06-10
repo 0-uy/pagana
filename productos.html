@@ -366,19 +366,119 @@ textarea.form-control {
   background: transparent;
 }
 
+/* Caja de costos de envío */
+.envio-info-box {
+  background: linear-gradient(135deg, #fff7f7, #fff1f1);
+  border: 1px solid #f5c6cb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 14px 0;
+}
+
+.envio-titulo {
+  color: #9e3939;
+  font-size: 0.95rem;
+}
+
+.envio-lista {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+  color: #555;
+  font-size: 0.88em;
+  line-height: 1.8;
+}
+
+.envio-gratis {
+  margin-top: 10px;
+  background-color: #e8f8ee;
+  border: 1px solid #b7e4c7;
+  color: #1e7e44;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.envio-nota {
+  display: block;
+  margin-top: 8px;
+  color: #999;
+}
+
+/* Modernización del modal de checkout */
+.modal-content {
+  border-radius: 18px !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2) !important;
+}
+
+.modal-content h3 {
+  font-size: 1.5rem;
+}
+
+.form-control {
+  border-radius: 10px !important;
+  border: 1px solid #e6dada !important;
+  background-color: #fcfcfc !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+
+.form-control:focus {
+  background-color: #fff !important;
+  border-color: #e8a0aa !important;
+  box-shadow: 0 0 0 3px rgba(232,160,170,0.2) !important;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  color: #666;
+  letter-spacing: 0.2px;
+}
+
+.btn-enviar {
+  border-radius: 30px !important;
+  box-shadow: 0 4px 14px rgba(192,57,43,0.3) !important;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(192,57,43,0.4) !important;
+}
+
+.button-container .btn-danger {
+  border-radius: 30px !important;
+  transition: transform 0.15s ease, box-shadow 0.2s ease !important;
+}
+
+.button-container .btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15) !important;
+}
+
 .close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   font-size: 18px;
   font-weight: bold;
   color: #333;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .close:hover {
-  color: #e74c3c;
+  background-color: #fde2e2;
+  transform: rotate(90deg);
 }
+
+
 .logcom {
   font-family: 'Righteous', sans-serif;
   font-size: 1.5rem;
@@ -833,6 +933,146 @@ textarea.form-control {
     display: block;
 }
 
+/* ===== Modernización general (capa aditiva, no rompe estilos existentes) ===== */
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Tarjetas de producto */
+.health-product-card,
+.alfacool-card {
+  border-radius: 18px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.health-product-card:hover,
+.alfacool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12) !important;
+}
+
+.health-product-card img,
+.alfacool-card img {
+  border-radius: 14px !important;
+  transition: transform 0.4s ease;
+}
+
+.health-product-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Botones de agregar al carrito */
+.health-product-card .btn,
+.health-product-card a.btn,
+.health-product-card button {
+  border-radius: 30px !important;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease !important;
+}
+
+.health-product-card .btn:hover,
+.health-product-card a.btn:hover,
+.health-product-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15) !important;
+}
+
+/* Botón principal "Explora y Ordena" */
+.add-button {
+  border-radius: 30px !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.add-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
+}
+
+/* Carrito */
+.carrito-dropdown {
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.icono-carrito {
+  transition: transform 0.2s ease;
+}
+
+.icono-carrito:hover {
+  transform: scale(1.08);
+}
+
+.contador-productos {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.btn-vaciar,
+.btn-pagar {
+  border-radius: 30px !important;
+  transition: transform 0.15s ease, box-shadow 0.2s ease !important;
+}
+
+.btn-vaciar:hover,
+.btn-pagar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18) !important;
+}
+
+/* Encabezado / navegación */
+.header_bottom {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar-nav .nav-link {
+  transition: color 0.2s ease;
+}
+
+/* Botón volver arriba */
+#myBtn {
+  border-radius: 50% !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+#myBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25) !important;
+}
+
+/* Slider hero */
+.slider-image {
+  border-radius: 0 0 24px 24px;
+}
+
+.slider-btn {
+  border-radius: 50% !important;
+  backdrop-filter: blur(2px);
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+.slider-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Suavizar tipografía de títulos */
+.health-heading,
+.hero-title {
+  letter-spacing: 0.3px;
+}
+
+/* Inputs/selects fuera del modal (búsqueda, etc.) */
+input.form-control,
+select.form-control,
+textarea.form-control {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
 </style>
 
 <!-- Formulario emergente para los datos del pedido -->
@@ -888,15 +1128,18 @@ textarea.form-control {
       </div><!-- cierre form-grid -->
 
       <!-- Aviso costos de envío FUERA del grid -->
-      <div style="background-color: #fff5f5; border: 1px solid #f5b8b8; border-radius: 8px; padding: 12px; margin: 10px 0;">
-        <strong style="color: #9e3939;">🚚 Costos de envío a domicilio:</strong>
-        <ul style="margin: 6px 0 0 0; padding-left: 18px; color: #555; font-size: 0.88em; line-height: 1.8;">
+      <div class="envio-info-box">
+        <strong class="envio-titulo">🚚 Costos de envío a domicilio:</strong>
+        <ul class="envio-lista">
           <li>Zona Solymar: <strong>$60</strong></li>
           <li>Zona Shangrilá: <strong>$90</strong></li>
           <li>Pasando el Puente de las Américas: <strong>$180</strong></li>
           <li>Zona La Tahona: <strong>$180</strong></li>
         </ul>
-        <small style="color: #999;">El costo de envío se coordina al confirmar el pedido por WhatsApp.</small>
+        <div class="envio-gratis">
+          🎉 Envíos superiores a <strong>$2500</strong> no tienen costo de envío.
+        </div>
+        <small class="envio-nota">El costo de envío se coordina al confirmar el pedido por WhatsApp.</small>
       </div>
 
       <div class="form-grid">
